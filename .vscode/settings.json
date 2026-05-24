@@ -1,0 +1,26 @@
+{
+  "editor.formatOnSave": true,
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  "isort.args": ["--profile", "black"],
+
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+
+  "[django-html]": {
+    "editor.formatOnSave": false
+  },
+
+  "files.associations": {
+    "**/templates/**/*.html": "django-html",
+    "**/templates/**/*": "django-html"
+  }
+}

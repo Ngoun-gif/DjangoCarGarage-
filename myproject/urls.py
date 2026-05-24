@@ -22,13 +22,9 @@ from django.views.decorators.csrf import ensure_csrf_cookie
 from django.views.generic import TemplateView
 
 urlpatterns = [
-     path('admin/', admin.site.urls),  # Django admin panel
-    path('', include('accounts.urls')),  # for login/register/logout
-    path('', include('frontend.urls')),  # public pages (home, service, etc.)
-    path('', include('backend.urls')),
-    path('api/', include('backend.api.urls')),
-
-   path("csrf/", ensure_csrf_cookie(TemplateView.as_view(template_name="blank.html")), name="csrf"),
+    path('admin/', admin.site.urls),  
+    path('', include('modules.urls')),
+    path("csrf/", ensure_csrf_cookie(TemplateView.as_view(template_name="blank.html")), name="csrf"),
 
 ]
 from django.conf import settings
